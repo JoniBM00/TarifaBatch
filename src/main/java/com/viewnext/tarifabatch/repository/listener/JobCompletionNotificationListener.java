@@ -33,4 +33,9 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
 		}
 	}
 
+	@Override
+	public void beforeJob(JobExecution jobExecution) {
+		log.info(jobExecution.getStatus().toString());
+	}
+
 }

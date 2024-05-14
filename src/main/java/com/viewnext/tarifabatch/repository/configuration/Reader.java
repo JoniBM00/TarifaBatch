@@ -12,9 +12,12 @@ import org.springframework.stereotype.Component;
 
 import com.viewnext.tarifabatch.business.model.Tarifa;
 
+import lombok.extern.slf4j.Slf4j;
+
 /*
  * Clase para hacer el reader de la bbdd
  */
+@Slf4j
 @Component
 public class Reader {
 
@@ -36,6 +39,8 @@ public class Reader {
 		reader.setDataSource(dataSource);
 		reader.setSql("SELECT id, nombre, precio FROM tarifas");
 
+		log.info("Driver de bbdd metido y consulta puesta");
+
 		reader.setRowMapper(new RowMapper<Tarifa>() {
 			@Override
 			public Tarifa mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -46,6 +51,7 @@ public class Reader {
 				return tarifa;
 			}
 		});
+		log.info("Conexion de los atributos de Tarifa vinculados con los de la consulta");
 		return reader;
 	}
 

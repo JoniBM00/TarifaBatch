@@ -1,0 +1,8 @@
+com\viewnext\tarifabatch\repository\configuration\BatchConfig.class
+com\viewnext\tarifabatch\business\Reader.class
+com\viewnext\tarifabatch\repository\listener\JobCompletionNotificationListener.class
+com\viewnext\tarifabatch\business\model\Catalogo.class
+com\viewnext\tarifabatch\business\model\Tarifa.class
+com\viewnext\tarifabatch\business\Reader$1.class
+com\viewnext\tarifabatch\business\Writer.class
+com\viewnext\tarifabatch\TarifaBatchApplication.class

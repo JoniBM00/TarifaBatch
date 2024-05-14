@@ -1,4 +1,4 @@
-package com.viewnext.tarifabatch.business;
+package com.viewnext.tarifabatch.repository.configuration;
 
 import org.springframework.batch.item.file.FlatFileItemWriter;
 import org.springframework.batch.item.file.builder.FlatFileItemWriterBuilder;
@@ -14,7 +14,9 @@ import com.viewnext.tarifabatch.business.model.Tarifa;
 public class Writer {
 
 	/**
-	 * Crea el writer de tarifa.csv
+	 * Instancio un {@link BeanWrapperFieldExtractor} para transformar a csv las
+	 * tarifas Le pongo los atributos y verifico que esten puestos Instancio un
+	 * {@link DelimitedLineAggregator} para añadirle los ; para poder crear el csv
 	 * 
 	 * @return El FlatFileItemWriter de Tarifa
 	 */

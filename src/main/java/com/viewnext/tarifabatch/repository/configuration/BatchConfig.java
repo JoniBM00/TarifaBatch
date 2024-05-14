@@ -18,7 +18,8 @@ import com.viewnext.tarifabatch.repository.listener.JobCompletionNotificationLis
 public class BatchConfig {
 
 	/**
-	 * Hace un job
+	 * Hace un job pasandole un {@link JobRepository} con un listener para ver si ha
+	 * funcionado y le pasa un Step
 	 * 
 	 * @param jobRepository
 	 * @param step1
@@ -31,7 +32,7 @@ public class BatchConfig {
 	}
 
 	/**
-	 * Hace un Step que lee las tarifas de la bbdd y escribe en csv
+	 * Hace un {@link Step} que lee las tarifas de la bbdd y escribe en csv
 	 * 
 	 * @param jobRepository
 	 * @param transactionManager

@@ -1,4 +1,4 @@
-package com.viewnext.tarifabatch.business;
+package com.viewnext.tarifabatch.repository.configuration;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,7 +22,9 @@ public class Reader {
 	}
 
 	/**
-	 * Hace el reader para la base de datos mysql
+	 * Le meto el driver para conectarse a la bbdd {@link DataSource} Le paso la
+	 * consulta que quiero hacer Despues al reader le pongo un {@link RowMapper} que
+	 * va leyendo por cada fila los datos de la bbdd
 	 * 
 	 * @param dataSource
 	 * @return El JdbcCursorItemReader del Objeto Tarifa

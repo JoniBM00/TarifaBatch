@@ -1,4 +1,4 @@
-package com.viewnext.tarifabatchbien;
+package com.viewnext.tarifabatch;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
